@@ -7,6 +7,20 @@
     <title>html_016_form</title>
   </head>
   <body>
+    <!--
+        <form> : 클라이언로 부터 입력받아 서버로 보내기 위한 요소를 작성한다.
+        action 속성 : 서버로 요청할 URL
+        method 속성
+            1)get : 폼의 데이터를 서버로 전송할때 256byte 미만이거나 보안이 필요하지 않는 데이터를 보낼때
+            2)post : 폼의 데이터를 서버로 전송할때 256byte 초과하거나 보안이 필요한 데이터를 보낼때
+        enctype 속성: 전송할 데이터에 첨부파일이 없을때는 application/x-www-form-urlencoded을 지정하고 
+                      첨부파일이 있을때는 multipart/form-data을 지정한다.
+
+        fieldset 요소: 여러개의 폼 요소를 그룹화 할때 사용한다.
+        legend 요소: 폼요소 그룹화 설정된 것에 대한 제목을 지정한다.
+        label 요소: 텍스트와 폼요소의 상관관계를 설정한다.
+        for 속성: 속성 값을 포커스를 이동하기 위해서 설정한다. 
+    -->
     <form action="#" method="post">
       <!--enctype=''-->
       <!--method="get"이면 비번 주소창에 노출 / 256byte 이상에 사용(get: 256byte 이하)-->
@@ -23,7 +37,7 @@
     <form action="#" method="get">
       <fieldset>
         <legend>로그인</legend>
-        <input type="text" name="fid" placeholder="아이디 입력" />
+        <input type="text" name="fid" placeholder="아이디 입력" maxlength="5" />
         <input type="password" name="fpass" placeholder="비밀번호 입력" />
       </fieldset>
       <input type="submit" value="로그인" />
