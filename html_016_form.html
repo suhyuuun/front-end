@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html_016_form</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <!--enctype=''-->
+      <!--method="get"이면 비번 주소창에 노출 / 256byte 이상에 사용(get: 256byte 이하)-->
+      <fieldset>
+        <legend>로그인</legend>
+        <label for="fid">아이디</label>
+        <input type="text" name="fid" id="fid" />
+        <label for="fpass">비밀번호</label>
+        <input type="password" name="fpass" id="fpass" />
+      </fieldset>
+      <input type="submit" value="로그인" />
+    </form>
+
+    <form action="#" method="get">
+      <fieldset>
+        <legend>로그인</legend>
+        <input type="text" name="fid" placeholder="아이디 입력" />
+        <input type="password" name="fpass" placeholder="비밀번호 입력" />
+      </fieldset>
+      <input type="submit" value="로그인" />
+    </form>
+  </body>
+</html>
