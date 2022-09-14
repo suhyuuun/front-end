@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_008_pseudo</title>
+    <style>
+      /*p요소가 어떤 요소의 첫번째 자식요소 일때 first-child와 last-child만 있음*/
+      p:first-child {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>div의 span요소</span>
+      <p>div의 두번째 자식</p>
+      <p>div의 세번재 자식</p>
+    </div>
+
+    <div>
+      <p>두번째 div의 첫번째 자식</p>
+    </div>
+  </body>
+</html>
