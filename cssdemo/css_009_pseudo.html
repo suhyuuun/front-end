@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_009_pseudo</title>
+    <style>
+      /*nth-chile(n)와 nth-of-type(n)*/
+
+      /*모든 자식요소에서 p요소가 2번째일때 적용*/
+      p:nth-child(2) {
+        background-color: red;
+      }
+      /*자식요소들 중에서 p요소만으로 2번째일때 적용*/
+      p:nth-of-type(2) {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>computer</p>
+      <span>test</span>
+      <p>monitor</p>
+      <p>television</p>
+      <p>desk</p>
+      <p>top</p>
+    </div>
+  </body>
+</html>

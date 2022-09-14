@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_009_pseudo</title>
+    <style>
+      /*nth-chile(n)와 nth-of-type(n)*/
+      /*even & 2n -> 짝수   odd ->홀수*/
+      /* p:nth-of-type(even) {
+        background-color: green;
+      } */
+
+      /* p:nth-of-type(2n) {
+        background-color: aqua;
+      } */
+      p:nth-of-type(odd) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>computer</p>
+      <span>test</span>
+      <p>monitor</p>
+      <p>television</p>
+      <p>desk</p>
+      <p>top</p>
+    </div>
+  </body>
+</html>
