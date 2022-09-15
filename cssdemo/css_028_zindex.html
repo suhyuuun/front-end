@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_028_zindex</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      #aa {
+        background-color: red;
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+      }
+      #bb {
+        background-color: green;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+      }
+      #cc {
+        background-color: blue;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        z-index
+        : 화면상에서 요소들이 겹쳐있을 때 요소의 위치를 나타내는 속성이다. 
+        : 숫자가 큰 요소가 가장 위에 배치된다.
+    -->
+    <div id="aa">red</div>
+    <div id="bb">green</div>
+    <div id="cc">blue</div>
+  </body>
+</html>
