@@ -10,6 +10,37 @@
         width: 100px;
         height: 100px;
         background-color: yellow;
+        border-width: 10px;
+        border-style: solid;
+        border-color: black;
+      }
+
+      .dv2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-bottom-width: 20px;
+        border-bottom-style: dotted;
+        border-bottom-color: aqua;
+      }
+
+      .dv3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /*top부터 시계방향으로 설정: top right bottom left*/
+        border-width: 5px 10px 15px 20px;
+        border-style: solid dotted dashed; /*top  right&left  bottom*/
+        border-color: black brown; /*top&bottom right&left*/
+      }
+      /*border: border-width border-style border-color|initial|inherit;
+      If border-color is omitted, the color applied will be the color of the text.*/
+      /*border style value is required*/
+      .dv4 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        border: 3px solid black;
       }
     </style>
   </head>
@@ -17,6 +48,8 @@
     <div class="wrap">
       <div class="dv1"></div>
       <div class="dv2"></div>
+      <div class="dv3"></div>
+      <div class="dv4"></div>
     </div>
   </body>
 </html>

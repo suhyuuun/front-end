@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_021_float</title>
+    <style>
+      /*
+        float
+        1. float는 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽 이동시키는 기능이다.
+        2. float가 지정된 박스는 문서의 일반적인 흐름에 영향을 받지 않으면서 이동된 위치에 떠 있다.
+        */
+      .wrap {
+        background-color: gray;
+      }
+
+      div.wrap div {
+        width: 100px;
+        height: 100px;
+      }
+
+      .box1 {
+        background-color: red;
+        float: left;
+      }
+      .box2 {
+        background-color: green;
+        float: left;
+      }
+      .box3 {
+        background-color: blue;
+        float: right;
+      }
+
+      div.wrap p {
+        clear: both; /*float 해제*/
+      }
+
+      img {
+        float: left;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <p>inline</p>
+    </div>
+
+    <div class="other" style="background-color: yellow; height: 500px">
+      <img src="images/gosu.jpg" alt="고수 영화배우" />
+      <p>
+        에어서울은 일본 3개 노선의 운항을 순차적으로 재개할 계획이다. 오는 27일
+        인천~도쿄(나리타) 노선 운항 재개를 시작으로 내달 30일부터는 오사카와
+        후쿠오카행 노선을 운항한다. 인천~도쿄(나리타) 노선은 오전 9시 40분에
+        인천국제공항을 출발해 일본 나리타국제공항에 12시 10분에 도착하는
+        일정이다. 주 2회(화·금) 운항한다.에어서울은 일본 3개 노선의 운항을
+        순차적으로 재개할 계획이다. 오는 27일 인천~도쿄(나리타) 노선 운항 재개를
+        시작으로 내달 30일부터는 오사카와 후쿠오카행 노선을 운항한다.
+        인천~도쿄(나리타) 노선은 오전 9시 40분에 인천국제공항을 출발해 일본
+        나리타국제공항에 12시 10분에 도착하는 일정이다. 주 2회(화·금)
+        운항한다.에어서울은 일본 3개 노선의 운항을 순차적으로 재개할 계획이다.
+        오는 27일 인천~도쿄(나리타) 노선 운항 재개를 시작으로 내달 30일부터는
+        오사카와 후쿠오카행 노선을 운항한다. 인천~도쿄(나리타) 노선은 오전 9시
+        40분에 인천국제공항을 출발해 일본 나리타국제공항에 12시 10분에 도착하는
+        일정이다. 주 2회(화·금) 운항한다.에어서울은 일본 3개 노선의 운항을
+        순차적으로 재개할 계획이다. 오는 27일 인천~도쿄(나리타) 노선 운항 재개를
+        시작으로 내달 30일부터는 오사카와 후쿠오카행 노선을 운항한다.
+        인천~도쿄(나리타) 노선은 오전 9시 40분에 인천국제공항을 출발해 일본
+        나리타국제공항에 12시 10분에 도착하는 일정이다. 주 2회(화·금) 운항한다.
+      </p>
+    </div>
+  </body>
+</html>

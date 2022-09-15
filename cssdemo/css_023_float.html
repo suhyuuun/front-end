@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_023_float</title>
+    <style>
+      .wrap {
+        width: 900px;
+        height: 700px;
+        background-color: yellow;
+      }
+      #header {
+        width: 900px;
+        height: 100px;
+        background-color: blue;
+      }
+      #nav {
+        width: 490px;
+        height: 600px;
+        background-color: olive;
+        float: left;
+      }
+      #section {
+        width: 390px;
+        height: 600px;
+        background-color: green;
+        float: right;
+      }
+      .box2_sub1 {
+        width: 490px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .box2_sub2 {
+        width: 490px;
+        height: 400px;
+        border: 1px solid black;
+      }
+
+      .box3_sub1 {
+        width: 390px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .box3_sub2 {
+        width: 390px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .box3_sub3 {
+        width: 390px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box1" id="header"></div>
+      <div class="comn_left" id="nav">
+        <div class="box2_sub1"></div>
+        <div class="box2_sub2"></div>
+      </div>
+      <div class="colmn_right" id="section">
+        <div class="box3_sub1"></div>
+        <div class="box3_sub2"></div>
+        <div class="box3_sub3"></div>
+      </div>
+    </div>
+  </body>
+</html>
