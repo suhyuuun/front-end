@@ -12,22 +12,28 @@
         border-width: 0;
       }
 
-      body {
+      /* body {
         margin-left: 10px;
+      } */
+
+      body div.wrap {
+        width: 1208px;
+        margin: 10px /*top bottom*/ auto /*right left*/;
       }
 
       h1 {
         width: 0;
         height: 0;
         font-size: 0;
-        text-indent: -2000px;
+        text-indent: -2000px; /*보이지 않도록 들여쓰기하는 것*/
       }
 
       ul.mainMenu {
-        width: 1208px;
+        width: 1208px; /* 300*4 + 8*/
         height: 104px;
-        background-color: yellow;
+        /* background-color: yellow; */
         border-left: 2px solid;
+        list-style-type: none;
       }
 
       ul.mainMenu li {
@@ -38,7 +44,42 @@
         border-left-width: 0;
       }
 
-      ul.mainMenu a:hover {
+      ul.mainMenu a {
+        display: block;
+        width: 300px;
+        height: 100px;
+        text-indent: -2000px;
+      }
+
+      ul.mainMenu li.mail a {
+        background-image: url("images/mail.gif");
+        background-image: no-repeat;
+      }
+
+      ul.mainMenu li.cafe a {
+        background-image: url("images/cafe.gif");
+      }
+
+      ul.mainMenu li.blog a {
+        background-image: url("images/blog.gif");
+      }
+
+      ul.mainMenu li.kin a {
+        background-image: url("images/kin.gif");
+      }
+
+      ul.mainMenu li.mail a:hover {
+        background-position: -300px 0px;
+      }
+
+      ul.mainMenu li.cafe a:hover {
+        background-position: right bottom;
+      }
+      ul.mainMenu li.blog a:hover {
+        background-position: right bottom;
+      }
+      ul.mainMenu li.kin a:hover {
+        background-position: right bottom;
       }
     </style>
   </head>
