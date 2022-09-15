@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_025_imageMenu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      body {
+        margin-left: 10px;
+      }
+
+      h1 {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        text-indent: -2000px;
+      }
+
+      ul.mainMenu {
+        width: 1208px;
+        height: 104px;
+        background-color: yellow;
+        border-left: 2px solid;
+      }
+
+      ul.mainMenu li {
+        border: 2px solid;
+        float: left;
+        width: 300px;
+        height: 100px;
+        border-left-width: 0;
+      }
+
+      ul.mainMenu a:hover {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>메뉴</h1>
+        <nav>
+          <ul class="mainMenu">
+            <li class="mail"><a href="#">메일</a></li>
+            <li class="cafe"><a href="#">카페</a></li>
+            <li class="blog"><a href="#">블로그</a></li>
+            <li class="kin"><a href="#">지식in</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
