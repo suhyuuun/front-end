@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_027_position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      .box1 {
+        width: 500px;
+        height: 100px;
+        background-color: black;
+      }
+
+      .box2 {
+        width: 500px;
+        height: 200px;
+        background-color: yellow;
+      }
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 50px;
+        top: 50px; /*absolute는 부모를 기분으로 하는데 부모의 position이 static이면 기준점이 body가 됨*/
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <p>요소들의 위치변경</p>
+    </div>
+
+    <div class="box5">
+      <div class="box6">
+        W3Schools is optimized for learning, testing, and training. Examples
+        might be simplified to improve reading and basic understanding.
+        Tutorials, references ..
+      </div>
+    </div>
+  </body>
+</html>
