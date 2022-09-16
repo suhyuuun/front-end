@@ -15,7 +15,7 @@
       body {
         font-family: "Times New Roman", serif;
       }
-      ul {
+      div#main_aside ul {
         list-style-type: none;
       }
 
@@ -24,20 +24,20 @@
         float: right;
       }
 
-      .item {
+      div#main_aside .item {
         border: 1px solid black;
         padding: 10px;
         border-top: none;
         overflow: hidden;
       }
-      .thumbnail {
+      div#main_aside .thumbnail {
         float: left;
       }
-      .description {
+      div#main_aside .description {
         float: left;
         margin-left: 10px;
       }
-      .description > strong {
+      div#main_aside .description > strong {
         display: block;
         /* background-color: yellow; */
         width: 120px;
@@ -58,6 +58,7 @@
       }
 
       input:nth-of-type(1):checked ~ div.buttons > label:nth-of-type(1) {
+        /*~: ~할때*/
         background-color: yellow;
         color: black;
       }
