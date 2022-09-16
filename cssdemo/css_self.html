@@ -11,13 +11,109 @@
         padding: 0;
         border-width: 0;
       }
+
+      .wrap {
+        width: 1200px;
+        height: 800px;
+        /* background-color: blue; */
+      }
+      #header {
+        width: 1200px;
+        height: 100px;
+        /* background-color: red; */
+      }
+      #nav {
+        width: 1200px;
+        height: 50px;
+        background-color: black;
+      }
+      #section {
+        width: 1200px;
+        height: 550px;
+        /* background-color: olive; */
+      }
+      #footer {
+        width: 1200px;
+        height: 100px;
+        /* background-color: orange; */
+      }
+
+      img {
+        margin-left: 50px;
+        margin-top: 30px;
+      }
+
+      dt {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        text-indent: -2000px;
+      }
+      .menulist1 {
+        width: 400px;
+        height: 50px;
+        background-color: yellow;
+      }
+      .menulist2 {
+        width: 1050px;
+        height: 30px;
+        background-color: yellow;
+      }
+      .menulist1 > dd a {
+        font-size: 15px;
+        color: black;
+        text-decoration: none;
+        display: block;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        float: left;
+      }
+      .menulist2 > dd a {
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+        text-decoration: none;
+        display: block;
+        width: 128px;
+        height: 30px;
+        text-align: center;
+        float: left;
+      }
+      .menulist1 dt {
+        float: right;
+      }
+      dl .menulist2 dd {
+        float: left;
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
       <div class="box1" id="header">
         <img src="images/logo.gif" alt="" />
+        <span id="search">SEARCH <input type="text;" name="search" /></span>
+        <dl class="menulist1">
+          <dt>메뉴목록</dt>
+          <dd><a href="#">로그인</a></dd>
+          <dd><a href="#">회원가입</a></dd>
+          <dd><a href="#">마이페이지</a></dd>
+          <dd><a href="#">이용안내</a></dd>
+          <dd><a href="#">고객센터</a></dd>
+        </dl>
       </div>
+      <div class="box2" id="nav">
+        <dl class="menulist2">
+          <dt>메뉴목록2</dt>
+          <dd><a href="#">상세 페이지</a></dd>
+          <dd><a href="#">장바구니</a></dd>
+          <dd><a href="#">고객 갤러리</a></dd>
+          <dd><a href="#">주문배송</a></dd>
+          <dd><a href="#">자주 하는 질문</a></dd>
+        </dl>
+      </div>
+      <div class="box3" id="section"></div>
+      <div class="box4" id="footer"></div>
     </div>
   </body>
 </html>
