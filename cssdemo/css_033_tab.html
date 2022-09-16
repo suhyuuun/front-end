@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_033_tab</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      body {
+        font-family: "Times New Roman", serif;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      div#main_aside {
+        width: 200px;
+        float: right;
+      }
+
+      .item {
+        border: 1px solid black;
+        padding: 10px;
+        border-top: none;
+        overflow: hidden;
+      }
+      .thumbnail {
+        float: left;
+      }
+      .description {
+        float: left;
+        margin-left: 10px;
+      }
+      .description > strong {
+        display: block;
+        background-color: yellow;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      div.buttons > label {
+        display: block;
+        width: 98px;
+        height: 30px;
+        border: 1px solid black;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_aside">
+      <input type="radio" name="tab" checked="checked" id="first" />
+      <input type="radio" name="tab" id="second" />
+
+      <div class="buttons">
+        <label for="first">First</label>
+        <label for="second">Second</label>
+      </div>
+      <div class="tab_item">
+        <ul>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>HTML5 Canvas</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>HTML5 Audio</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>HTML5 Video</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>HTML5 S</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!------------------------------->
+      <div class="tab_item">
+        <ul>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>CSS3_1</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>CSS3_2</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>CSS3_3</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+          <li class="item">
+            <a href="#"
+              ><div class="thumbnail">
+                <img src="https://via.placeholder.com/45x30" alt="" />
+              </div>
+              <div class="description">
+                <strong>CSS3_4</strong>
+                <p>2020-03-15</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

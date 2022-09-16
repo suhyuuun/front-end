@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_031_login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      body {
+        margin: 50px;
+      }
+      form {
+        /* background-color: yellow; */
+        width: 280px;
+        height: 100px;
+      }
+      .loginMenu {
+        width: 278px;
+        height: 98px;
+        border: 1px solid #00b3dc;
+        position: relative;
+      }
+
+      .loginMenu * {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .loginMenu #id {
+        width: 150px;
+        height: 20px;
+        left: 20px;
+        top: 10px;
+        border: 1px solid #00bfff;
+      }
+      .loginMenu #password {
+        width: 150px;
+        height: 20px;
+        left: 20px;
+        top: 38px;
+        border: 1px solid #00bfff;
+      }
+      .loginMenu #remember {
+        width: 14px;
+        height: 14px;
+        left: 178px;
+        top: 13px;
+      }
+      .loginMenu label {
+        width: 74px;
+        height: 15px;
+        left: 198px;
+        top: 12px;
+        font: 12px Arial;
+      }
+      .loginMenu #loginBtn {
+        width: 60px;
+        height: 20px;
+        left: 178px;
+        top: 38px;
+      }
+      .loginMenu legend {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        text-indent: -2000px;
+      }
+      .loginMenu span {
+        width: 100px;
+        height: 20px;
+        top: 70px;
+        left: 30px;
+      }
+
+      .loginMenu span a {
+        font-size: 14px;
+        color: #00bfff;
+        text-decoration: none;
+      }
+      .loginMenu span a:hover {
+        font-weight: bolder;
+        color: black;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <form action="#post" method="post">
+        <fieldset class="loginMenu">
+          <legend class="hidden">로그인</legend>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            title="아이디입력"
+            placeholder="아이디입력"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            title="비밀번호입력"
+            placeholder="비밀번호입력"
+          />
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">아이디저장</label>
+          <input
+            type="image"
+            src="images/signin.gif"
+            alt="로그인버튼"
+            id="loginBtn"
+          />
+          <span><a href="#">회원가입</a></span>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
