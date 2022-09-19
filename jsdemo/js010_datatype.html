@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js010_datatype.html</title>
+  </head>
+  <body>
+    <script>
+      let data = 30;
+      data = "javascript";
+      let wrap = data;
+
+      console.log(data == wrap); //true
+
+      let customer = { name: "홍길동", age: 30 };
+      let pcopy = customer;
+      pcopy.name = "고수";
+      console.log(customer == pcopy); //true
+      console.log(`${customer.name}`); //고수
+      console.log(`${pcopy.name}`); //고수
+    </script>
+  </body>
+</html>

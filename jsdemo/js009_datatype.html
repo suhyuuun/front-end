@@ -35,9 +35,27 @@
 
       let loc = new String("node");
       console.log(`loc=${loc}, ${typeof loc}`); //loc = node, object
+      console.log(`loc=${loc instanceof String}`); //loc = true
 
       let jumsu = new Number(10);
       console.log(`jumsu=${jumsu}, ${typeof jumsu}`); //jumsu=10, object
+      console.log(`jumsu=${jumsu instanceof Number}`); //jumsu=true
+      //변수의 값으로 사용되는 함수는 익명함수로 정의한다.
+      let fn = function () {
+        console.log("function");
+      };
+
+      console.log(`fn=${fn}, ${typeof fn}`); //fn=function () {console.log('function');}, function
+
+      let arr = [1, 2, 3];
+      console.log(`arr=${arr},${typeof arr}`); //arr=1,2,3, object
+      console.log(`arr=${arr instanceof Array}`); //arr=true
+
+      let customer = { name: "홍길동", age: 30 };
+      console.log(`customer=${customer},${typeof customer}`); //customer=[object Object], object
+      console.log(`customer=${customer instanceof Object}`); //customer = true
+
+      console.log(`${customer.name}, ${customer.age}`); //홍길동, 30
     </script>
   </body>
 </html>
