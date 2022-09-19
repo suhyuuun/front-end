@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js002_call.html</title>
+    <!-- <script type="text/javascript" src="js/a.js"></script> -->
+    <script defer type="text/javascript" src="js/b.js"></script>
+    <!-- 
+      외부스크립트를 가져올때 위에서 부터 읽어내려가는 컴퓨터의 특성 상
+      html보다 script가 먼저 실행됨으로써 생기는 오류를 막기위해서 defer 를 입력 : 현재방식
+    -->
+  </head>
+  <body>
+    <p id="wrap">data</p>
+  </body>
+</html>

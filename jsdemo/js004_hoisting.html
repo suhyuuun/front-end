@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js004_hoisting.html</title>
+  </head>
+  <body>
+    <script>
+      //console.log(`num=%d`, num);
+
+      //Uncaught ReferenceError: Cannot access 'num' before initialization
+      // let num = 3;
+
+      // num=NaN
+      // var num = 3;
+
+      var foo = 10;
+      let bar = 20;
+      const tap = 50; // 상수 : 변수를 선언할 때 한번만 값을 할당 할 수 있다.
+
+      f00 = 30;
+      bar = 40;
+      // Uncaught TypeError: Assignment to constant variable.
+      // tap = 60;
+
+      console.log(`foo=${foo}`);
+      console.log(`bar=${bar}`);
+      console.log(`tap=${tap}`);
+
+      let subject;
+      // undefined
+      console.log(subject);
+
+      let run = null;
+      console.log(run);
+    </script>
+  </body>
+</html>
