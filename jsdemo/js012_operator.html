@@ -29,6 +29,18 @@
       // ||은 좌변이 true이면 우변을 수행안한다.
       //   let count = b > a || ++c > 4;
       //   console.log(`count=${count}, c=${c}`); //count=true, c=9
+
+      let check = b > a && "통과";
+      console.log(check); //통과
+
+      check = a > b || "실패";
+      console.log(check); //실패
+
+      check = b > a && null;
+      console.log(check); //null
+
+      check = b > a && undefined;
+      console.log(check); //undefined
     </script>
   </body>
 </html>
