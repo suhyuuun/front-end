@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: '맑은 고딕', '돋움';
+  font-family: "맑은 고딕", "돋움";
   font-size: 12px;
   color: #444444;
   background-color: #f2f0f0;
@@ -47,7 +47,7 @@ header #logo {
 
 header #search {
   float: left;
-  font-family: 'Sans-serif';
+  font-family: "Sans-serif";
   font-size: 12px;
   color: #96c11f;
   margin: 40px 0 0 150px;
