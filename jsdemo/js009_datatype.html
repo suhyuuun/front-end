@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js009_datatype.html</title>
+  </head>
+  <body>
+    <script>
+      //datatype : primitive datatype(기본 데이터 타입), reference datatye(참조데이터 타입)
+      let num = 3;
+      //typeof(num)
+      console.log(typeof num); //number
+      console.log(num + 2); //숫자열이기 때문에 3+2 =5
+
+      num = "3";
+      console.log(typeof num);
+      console.log(num + 2); //문자열이기 때문에 '3'+2 =32
+
+      let avg = 4.5;
+      console.log(`avg=${avg}, ${typeof avg}`); //avg=4.5, number
+
+      let check = true;
+      console.log(`check=${check}, ${typeof check}`); //true, boolean
+
+      let data = "javascript";
+      console.log(`data=${data}, ${typeof data}`); //data=javascript, string
+
+      let na = undefined;
+      console.log(`na=${na}, ${typeof na}`); //na=undefind, undefind
+
+      let name = null;
+      console.log(`name=${name}, ${typeof name}`); //name=null, object
+
+      let loc = new String("node");
+      console.log(`loc=${loc}, ${typeof loc}`); //loc = node, object
+
+      let jumsu = new Number(10);
+      console.log(`jumsu=${jumsu}, ${typeof jumsu}`); //jumsu=10, object
+    </script>
+  </body>
+</html>

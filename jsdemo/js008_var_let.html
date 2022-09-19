@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>js008_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      let bar = 1;
+      {
+        console.log(bar);
+        let bar = 2; //값을 할당하기 전에 초기화단계로
+      }
+      //일시적 사각지대...?
+    </script>
+  </body>
+</html>
