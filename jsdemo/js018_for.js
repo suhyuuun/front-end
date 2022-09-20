@@ -87,6 +87,25 @@ for(초기값; 조건식; 증감식){
 
 for (let i = 1; i <= 3; i++) {
   for (let j = 1; j <= 3; j++) {
-    console.log(`i=${i}, j=${j}`);
+    //console.log(`i=${i}, j=${j}`);
+    process.stderr.write(`i=${i} j=${j},`);
+  }
+  process.stderr.write("\n");
+}
+
+console.log("====================");
+
+//https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String
+//이스케이프 : 프로그램에서 주변장치를 컨트롤하기위해 사용되는 기능
+//             \n : 줄바꿈 \t : 탭 \": 큰따옴표 \' : 작은따옴표 (\b : 백스페이스 \v : 수직탭)
+
+movei: for (let i = 1; i <= 5; i++) {
+  //movei -> label 정의
+  for (let j = 10; j <= 13; j++) {
+    for (let k = 1; k <= 3; k++) {
+      console.log(`i=${i}, j=${j}, k=${k}`);
+      if (k == 2) break movei;
+    }
   }
 }
+//두개 이상의 반복문을 사용할 때 label은 사용할 반복문 앞에 작성하기
