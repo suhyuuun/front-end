@@ -1,3 +1,5 @@
+//js017_switch_self.js
+
 let year = "1988";
 switch (year % 12) {
   case 0:

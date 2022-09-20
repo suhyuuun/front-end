@@ -1,4 +1,5 @@
 //js015_operator.js
+
 // console.log("hello javascript");
 // console.log("test javascript");
 
