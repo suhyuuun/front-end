@@ -52,44 +52,48 @@ switch (code) {
 switch-case문을 이용해서 년도에 해당하는 띠를 구하는 프로그램을 구현하시오.
 1. 12가지 띠 : 원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양
 2. 띠 구하는 공식 : year%12의 결과가
-0 - 원숭이 1 - 닭 2 - 개 3 - 돼지 4 - 쥐 5 - 소 
-6 - 호랑이 7 - 토끼 8 - 용 9 - 뱀 10 - 말 11 - 양
+    0 - 원숭이 1 - 닭 2 - 개 3 - 돼지 4 - 쥐 5 - 소 
+    6 - 호랑이 7 - 토끼 8 - 용 9 - 뱀 10 - 말 11 - 양
+3. 출력결과 : 2012년도의 태생을 용띠입니다.
 */
+
 let year = "2012";
+let animal = "";
 switch (year % 12) {
   case 0:
-    console.log(`${year}년도의 태생은 원숭이띠입니다.`);
+    animal = "원숭이";
     break;
   case 1:
-    console.log(`${year}년도의 태생은 닭띠입니다.`);
+    animal = "닭";
     break;
   case 2:
-    console.log(`${year}년도의 태생은 개띠입니다.`);
+    animal = "개";
     break;
   case 3:
-    console.log(`${year}년도의 태생은 돼지띠입니다.`);
+    animal = "돼지";
     break;
   case 4:
-    console.log(`${year}년도의 태생은 쥐띠입니다.`);
+    animal = "쥐";
     break;
   case 5:
-    console.log(`${year}년도의 태생은 소띠입니다.`);
+    animal = "소";
     break;
   case 6:
-    console.log(`${year}년도의 태생은 호랑이띠입니다.`);
+    animal = "호랑이";
     break;
   case 7:
-    console.log(`${year}년도의 태생은 토끼띠입니다.`);
+    animal = "토끼";
     break;
   case 8:
-    console.log(`${year}년도의 태생은 용띠입니다.`);
+    animal = "용";
     break;
   case 9:
-    console.log(`${year}년도의 태생은 뱀띠입니다.`);
+    animal = "뱀";
     break;
   case 10:
-    console.log(`${year}년도의 태생은 말띠입니다.`);
+    animal = "말";
     break;
   case 11:
-    console.log(`${year}년도의 태생은 양띠입니다.`);
+    animal = "양";
 }
+console.log(`${year}년도의 태생은 ${animal}띠입니다.`);
