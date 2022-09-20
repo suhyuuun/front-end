@@ -34,3 +34,4 @@ let input = "n";
 do {
   console.log("고객님 주문하시겠습니까?(y/n)");
 } while (input == "y");
+
