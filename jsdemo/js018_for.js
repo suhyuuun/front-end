@@ -45,12 +45,48 @@ console.log("====================");
 홀수: ?
 */
 
-let even = 2,
-  odd = 1,
-  sum1 = 0,
-  sum2 = 0;
-for (; even <= 10, odd <= 10; even += 2, odd += 2) {
-  sum1 += even;
-  sum2 += odd;
+let odd = 0;
+let even = 0;
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 == 1) {
+    odd += i;
+  } else {
+    even += i;
+  }
 }
-console.log(`짝수: ${sum1} 홀수: ${sum2}`);
+
+console.log(`짝수:${even}`);
+console.log(`홀수:${odd}`);
+
+console.log("====================");
+
+/*
+continue: 반복문에서 continue를 만나면 조건식으로 이동
+for(초기식;조건식;증감식){continue;}
+while(조건식){continue;}
+*/
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 3 == 0) {
+    continue;
+  }
+  console.log(i);
+}
+
+console.log("====================");
+
+/*
+중첩반복문
+for(초기값; 조건식; 증감식){
+    for(초기값; 조건식; 증감식){
+    실행문;
+  }
+}
+*/
+
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 3; j++) {
+    console.log(`i=${i}, j=${j}`);
+  }
+}
