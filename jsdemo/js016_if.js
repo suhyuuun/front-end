@@ -95,9 +95,9 @@ console.log(y >= "a" && y <= "z");
 
 let check = "D";
 if (check >= "A" && check <= "Z") {
-  console.log(`${check}는 대문자입니다.`);
+  console.log(`${check}는 대문자입니다.`); // 'A' = 65
 } else if (check >= "a" && check <= "z") {
-  console.log(`${check}는 소문자입니다`);
+  console.log(`${check}는 소문자입니다`); //'a' = 97
 } else {
-  console.log(`${check}는 기타입니다.`);
+  console.log(`${check}는 기타입니다.`); //'0' = 48
 }
