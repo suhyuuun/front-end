@@ -263,3 +263,12 @@ display5(1, 2);
 //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments
 //arguements.callee -> 현재 실행 중인 함수를 가리킵니다.
 //arguments[@@iterator] -> 배열로 변경가능
+
+/*
+arguments 객체
+- 함수 안에서만 기본으로 사용할 수 있는 자바스크립트 객체이다.
+- 함수 런타임 시점에 자동으로 생성되는 객체이며, 함수 코드 및 파라미터는 무관하게 자동 생성된다.
+- 함수 호출할때 함수로 전달된 실제 인자들의 정보를 담고 있는 객체이다.
+- 함수 선언에서 파라미터로 정의한 변수 갯수보다 실제 함수 호출할때 전달하는 인수의 갯수가 다를 수 있는 
+   자바스크립트의 특성을 고려해 만들어진 객체이다.
+*/
