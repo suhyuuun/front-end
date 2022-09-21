@@ -6,21 +6,18 @@
   */
 
 let arr = [1, 3, 5, 8, 9, 11, 15, 19, 18, 20, 30, 33, 31];
-let k=0;
-for(let i=0;i<arr.length;i++){
-  if(arr[i]%3==0){
-    k++;
-  }
-}
-console.log(k);
 
 //주어진 arr배열에서 3의 배수를 구해서 리턴하는 함수 정의
-function process(arr) {
-  for(let i=0;i<arr.length;i++){
-    if(arr[i]%3==0);
+function process(data) {
+  for(let i=0;i<data.length;i++){
+    if(data[i]%3!=0){
+      continue;
+    }  console.log(data[i]);
   }
   return null;
 }
+
+process(arr);
 
 //주어진 arr배열에서 3의 배수의 갯수를 리턴하는  함수 정의
 function count(process) {
@@ -44,6 +41,7 @@ let alpa = ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'];
 
 //alpa배열의 요소를  reverse한 후 리턴하는 함수 정의
 function reverse(alpa) {
+  for(let i=o;i<alpa;)
   return null;
 }
 
