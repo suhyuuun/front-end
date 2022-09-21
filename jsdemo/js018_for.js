@@ -69,7 +69,7 @@ while(조건식){continue;}
 
 for (let i = 1; i <= 10; i++) {
   if (i % 3 == 0) {
-    continue;
+    continue; //for문을 컨트롤하기 위해 사용하는 것
   }
   console.log(i);
 }

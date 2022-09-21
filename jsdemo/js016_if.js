@@ -4,7 +4,8 @@
 제어문(statement) : 프로그램의 흐름을 제어할 수 있는 실행문이다.
     1. 조건문 : if~else
     2. 선택문 : switch ~case 
-    3. 반복문 : for, while
+    3. 반복문 : for, while, do~while, for~in, for~of
+    4. label(임의의 이름을 정의하여 사용), continue, break
 
 조건문 : 조건식의 값이 참인지 아니면 거짓인지에 따라 실행문의 제어가 결정
 
