@@ -1,22 +1,23 @@
 /* [문제1] 
 num변수의 값이 10의 배수이면 1을 아니면 0을 리턴하는 프로그램을 구현하시오. 
 [실행결과] 0 또는 1 */
-let num = -10;
-if (num % 10 == 0) {
-  console.log(1);
-} else console.log(0);
+let num = 10;
+let bit = num % 10 == 0 ? 1 : 0;
+console.log(bit);
 
 /* [문제2] 
 1 사과를 담는데 필요한 바구니의 수를 구하는 코드이다. 
 2 만일 사과의 수가 123개이고 하나의 바구니에는 10개의 사과를 담을 수 있다면, 13개의 바구니가 필요하다 
 3 [실행결과] 필요한 바구니의 수 : 13 */
-let apple = 123;
-let storageOfBasket = 10;
-let numOfBasket = 0;
-if (apple % storageOfBasket == 0) {
-  basket = apple / 10;
-} else basket = parseInt(apple / storageOfBasket) + 1;
-console.log(`필요한 바구니의 수: ${basket}`);
+let numOfApple = 123;
+let sizeOfBasket = 10;
+let numOfBasket;
+
+numOfBasket =
+  numOfApple % sizeOfBasket == 0
+    ? parseInt(numOfApple / sizeOfBasket)
+    : parseInt(numOfApple / sizeOfBasket) + 1;
+console.log(`필요한 바구니의 수: ${numOfBasket}`);
 
 /* [문제3] 
 switch~case문을 이용해서 차량5부제 프로그램을 구현하시오. 
@@ -56,11 +57,11 @@ switch (carLastNumber) {
 2) 년도를 400로 나눈 나머지가 0이다.
 [출력결과] 2004 2008 2012 */
 for (let year = 2001; year <= 2012; year++) {
-  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+  let leapYearCheck = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+  if (leapYearCheck) {
     console.log(year);
   }
 }
-
 /* [문제5] 
 1 10=2x+3y의 해를구하시오. 
   x와y의 범위 : 0<=x<=10, 0<=y<=10 
@@ -68,6 +69,8 @@ for (let year = 2001; year <= 2012; year++) {
 
 for (let x = 0; x <= 10; x++) {
   for (let y = 0; y <= 10; y++) {
-    if (2 * x + 3 * y == 10) console.log(`*x=${x}, y=${y}`);
+    if (2 * x + 3 * y == 10) {
+      process.stderr.write(`*x=${x}, y=${y}`);
+    }
   }
 }
