@@ -43,8 +43,8 @@ function isleapYear(year) {
 }
 
 //함수 호출
-year = 2014;
-let result = isleapYear(year); //year : argument (인수)
+year = 2014; //year : argument (인수)
+let result = isleapYear(year); 
 console.log(result);
 if (result) {
   console.log(`${year}년은 윤년입니다`);
@@ -73,10 +73,12 @@ console.log(add(1, 2, 3, 4, 5)); //3 , 순서대로 1과 2를 받음
 // console.log(add3()); //err
 add(5, 7); //a=5 b=7
 
+//함수선언
 function hello(name) {
   console.log(`${name}님 환영합니다`);
 }
 
+//함수호출
 hello(`홍길동`);
 console.log(hello(`고수`)); //undefined
 
@@ -103,7 +105,6 @@ hap(10, 30); //40
 let sub = (a, b) => {
   return a + b;
 };
-
 console.log(sub); //[Function: sub]
 console.log(sub(3, 5)); //8
 
@@ -115,9 +116,9 @@ console.log(call); //[Function: call]
 console.log(call(3, 4)); //undefined
 call(3, 4); //7
 
-//let call2 = (a) =>{
-//return a;
-//};
+// let call2 = (a) =>{
+// return a;
+// };
 
 //parameter가 한개이면 소괄호()생략이 가능하다
 //return하는 문장만 실행문에 있으면 중괄호{}와 함께 return을 반드시 생략할 수 있다.
@@ -169,7 +170,7 @@ console.log(getNumber(callback));
 1) 중첩함수는 outer(외부)함수가 끝나면 외부에서 outer(외부)함수의 자원을 사용할 수 없다.
 2) 클로저는 outer(외부) 함수보다 중첩 함수가 더 오래 유지되는 경우 중첩 함수는 이미 생명주기가 종료한
     외부함수의 변수를 참조할 수 있다. 이러한 중첩함수가 클로저이다.
-3) 클로저는 변수가 의도치 않게 변겨오디지 않도록 안전하게 은닉(information hiding)하고 특정 함수에게만
+3) 클로저는 변수가 의도치 않게 변경되지 않도록 안전하게 은닉(information hiding)하고 특정 함수에게만
     상태 변경을 허용하여 상태를 안전하게 변경하고 유지하기 위해 사용한다.
  */
 

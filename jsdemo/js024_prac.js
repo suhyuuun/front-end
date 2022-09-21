@@ -6,9 +6,19 @@
   */
 
 let arr = [1, 3, 5, 8, 9, 11, 15, 19, 18, 20, 30, 33, 31];
+let k=0;
+for(let i=0;i<arr.length;i++){
+  if(arr[i]%3==0){
+    k++;
+  }
+}
+console.log(k);
 
 //주어진 arr배열에서 3의 배수를 구해서 리턴하는 함수 정의
 function process(arr) {
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]%3==0);
+  }
   return null;
 }
 
