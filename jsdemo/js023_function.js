@@ -246,3 +246,20 @@ function display4(num, ...args) {
 display4(1, 2); //1 [2]
 display4(1); // 1 [ ]
 display4(1, 2, 3, 4, 5); // 1 [2,3,4,5]
+
+//arguments 객체
+function display5() {
+  let result = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(typeof arguments, arguments instanceof Array, arguments.callee);
+    console.log(arguments[i]);
+  }
+}
+
+display5(1, 2);
+// display5(3);
+// display5(4, 5, 6, 7, 8);
+
+//https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments
+//arguements.callee -> 현재 실행 중인 함수를 가리킵니다.
+//arguments[@@iterator] -> 배열로 변경가능
