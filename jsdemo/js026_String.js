@@ -115,7 +115,7 @@ for (let i = 0; i < data.length; i += 1) {
 }
 
 //repeat()
-let text = "koea";
+let text = "korea";
 console.log(text.repeat(10)); //문자열이 10번 실행됨
 
 text = "*";
