@@ -20,3 +20,20 @@ console.log(data + nObj); //number + object = 20
 console.log(typeof nObj.valueOf()); //number
 console.log(typeof new String(`javascript`)); //object
 console.log(typeof new String(`javascript`).valueOf()); //string
+
+console.log(parseInt("10")); //10
+//let val = "10.0";
+// let val = "10.3";
+// let val = "A";
+//slet val = "10A";
+let val = "A10";
+
+console.log(val + val); //10.010.0 10.310.3 10A10A A10A10
+
+//Number(), parseInt()
+console.log(Number(val) + Number(val)); //20 20.6           NaN    NaN   NaN
+console.log(parseInt(val) + parseInt(val)); //20 20         NaN    20    NaN
+console.log(parseFloat(val) + parseFloat(val)); //20 20.6   NaN    20    NaN
+
+console.log(Number.POSITIVE_INFINITY); //Infinity
+console.log(Number.NaN); //NaN
