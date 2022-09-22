@@ -9,10 +9,11 @@ let arr = [1, 3, 5, 8, 9, 11, 15, 19, 18, 20, 30, 33, 31];
 
 //주어진 arr배열에서 3의 배수를 구해서 리턴하는 함수 정의
 function process(data) {
-  for(let i=0;i<data.length;i++){
-    if(data[i]%3!=0){
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] % 3 != 0) {
       continue;
-    }  console.log(data[i]);
+    }
+    console.log(data[i]);
   }
   return null;
 }
@@ -26,7 +27,8 @@ function count(process) {
 
 //주어진 arr배열에서 3의 배수 합을 리턴하는 함수 정의
 function arrPlus(process) {
-  return 0;
+  let sum = arr.length;
+  return sum;
 }
 
 /*
@@ -37,12 +39,11 @@ tpircsavaj
 javascript
 */
 
-let alpa = ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'];
+let alpa = ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"];
 
 //alpa배열의 요소를  reverse한 후 리턴하는 함수 정의
 function reverse(alpa) {
-  for(let i=o;i<alpa;)
-  return null;
+  for (let i = o; i < alpa.length; i++) return null;
 }
 
 //data배열의 출력하는  함수 정의
