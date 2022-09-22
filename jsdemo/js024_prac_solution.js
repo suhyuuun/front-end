@@ -34,7 +34,9 @@ function count(process) {
 //주어진 arr배열에서 3의 배수 합을 리턴하는 함수 정의
 function arrPlus(process) {
   let sum = 0;
-  for (let i = 0; i < process.length; i++) sum += process[i];
+  for (let i = 0; i < process.length; i++) {
+    sum += process[i];
+  }
   return sum;
 }
 console.log(process(arr));
@@ -58,7 +60,7 @@ function process2(arr2) {
   return data;
 }
 
-//주어진 arr배열에서 3의 배수의 갯수를 리턴하는  함수 정의
+//주어진 arr배열에서 3의 배수의 갯수를 리턴하는  함수 정의s
 function count2(/*process2*/) {
   // let data = [];
   let cnt = 0;
@@ -82,6 +84,7 @@ function arrPlus2(/*process2*/) {
   }
   return sum;
 }
+
 console.log(process2(arr2));
 console.log(count2());
 console.log(arrPlus2());
@@ -98,8 +101,19 @@ let alpa = ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"];
 
 //alpa배열의 요소를  reverse한 후 리턴하는 함수 정의
 function reverse(alpa) {
-  for (let i = o; i < alpa; ) return null;
+  let data = [];
+  for (let i = alpa.length - 1; i >= 0; i--) {
+    data[data.length] = alpa[i];
+  }
+  return data;
 }
 
 //data배열의 출력하는  함수 정의
-function display(data) {}
+function display(data) {
+  for (let i = 0; i < data.length; i++) process.stdout.write(data[i]);
+  process.stdout.write(`\n`);
+}
+
+display(alpa);
+display(reverse(alpa));
+display(alpa);
