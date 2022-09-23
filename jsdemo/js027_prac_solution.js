@@ -11,12 +11,8 @@ protocal: ftp, domain: ftp.microsoft.com
 
 //[출력결과]를 참고하여 separator함수를 구현하세요.
 function separator(data) {
-  let protocal = data.indexOf(":");
-  let domain = data.indexOf("/") + 2;
-  let length = data.length - domain;
-  let a = data.slice(0, protocal);
-  let b = data.substr(domain, length);
-  console.log(`protocal: ${a} , domain: ${b}`);
+  let arr = data.split("://");
+  console.log(`protocal: ${arr[0]} , domain: ${arr[1]}`);
 }
 separator("http://www.daum.net");
 separator("ftp://ftp.microsoft.com");
@@ -37,11 +33,12 @@ let person1 = { name: "홍길동", phone: "010-1234-5678" };
 let person2 = { name: "진여구", phone: "010-253-2253" };
 //출력결과를 참고하여 display()함수를 구현하세요
 function display(customer) {
-  let middleNumber = customer.phone.slice(4, -5);
-  let lastNumber = customer.phone.slice(-4); //-4부터 뒤에 모든 값을 불러오고 싶으면 -4만 작성
-  let i = "*";
+  let start = customer.phone.indexOf("-");
+  let end = customer.phone.lastIndexOf("-");
   console.log(`이름 : ${customer.name}`);
-  console.log(`연락처 : 010-${i.repeat(middleNumber.length)}-${lastNumber}`);
+  let searchWord = customer.phone.substring(start + 1, end);
+  let phoneStar = "*".repeat(searchWord.length);
+  console.log(`연락처 : ${customer.phone.replace(searchWord, phoneStar)}`);
 }
 display(person1);
 display(person2);

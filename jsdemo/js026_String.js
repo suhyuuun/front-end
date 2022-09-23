@@ -16,7 +16,7 @@ console.log(data.length);
 data = "Apple, Banana, Kiwi";
 console.log(`data.substring : ${data.substring(7, 13)}`); //data.substring : Banana -> 7인덱스부터 13인덱스 미만
 //substirng()은 음수값을 지원하지 않음
-console.log(`data.substring : ${data.substring(-12, -6)}`);
+console.log(`data.substring : ${data.substring(-12, -6)}`); //string에서만 음수값 지원?
 console.log(data); //Apple,Banana, Kiwi
 
 console.log(`data.substr : ${data.substr(7, 6)}`);
