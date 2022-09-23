@@ -85,10 +85,10 @@ shape.forEach((element, index) => {
 });
 //문자열은 forEach()를 제공하지 않으므로 사용할 수 없다.
 //TypeError: choice.forEach is not a function
-let choice = "javascript";
-choice.forEach(function (element, index) {
-  console.log(`${index} : ${element}`);
-});
+// let choice = "javascript";
+// choice.forEach(function (element, index) {
+//   console.log(`${index} : ${element}`);
+// });
 
 //배열명.map(callback);
 //.map은 요소에 있는 개수를 리턴해준다.
@@ -101,7 +101,7 @@ console.log(`res = ${res}`); //8,18,32,50
 //Math.sqrt : 요소의 제곱근
 const sqt = numbers.map(Math.sqrt);
 console.log(`sqt = ${sqt}`); //2,3,4,5
-
+console.log(`============================`);
 //reduce(); ->
 function getSum(total, num) {
   //total : 누적 , num : 요소
