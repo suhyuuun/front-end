@@ -77,6 +77,9 @@ aNode = pNode.firstElementChild;
 //<img src="images/gosu.jpg" alt="영화배우 고수">
 console.log(aNode);
 
+//////////////////////////////////////////
+//getAttribute("속성명"), setAttribute("속성명", "속성값")
+//객체.속성명, 객체.속성명="값"
 let aAttrNode = aNode.getAttribute("src");
 //images/gosu.jpg -> 메소드로 지정할 경우 이름만 가지고 옴
 console.log(aAttrNode);
@@ -84,3 +87,9 @@ console.log(aAttrNode);
 aAttrNode = aNode.src;
 //http://127.0.0.1:5500/images/gosu.jpg -> 전체를 가지고 옴
 console.log(aAttrNode);
+
+aNode.setAttribute("title", "스타배우");
+console.log(aNode.getAttribute("title")); //스타배우
+
+aNode.id = "imgGosu";
+console.log(aNode.id); //(객체.속성명)
