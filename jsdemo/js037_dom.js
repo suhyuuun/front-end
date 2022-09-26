@@ -29,9 +29,15 @@ console.log(
 );
 
 ////////////////////////////////////////////
-//
+//innerText, innerHTML : 요소의 컨텐츠
 
 let bodyNode = document.getElementsByTagName("body")[0];
 //content innerText :  textnode값만 가지고옴
 console.log(bodyNode.innerText);
 console.log(bodyNode.innerHTML); // innerHTML : body에 있는 모든 자원을 출력
+
+////////////////////////////////////////////
+//value
+let fname = document.querySelector("#fname");
+//홍길동
+console.log(fname.value);
