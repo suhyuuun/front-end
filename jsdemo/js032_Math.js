@@ -25,3 +25,5 @@ console.log(Math.random()); //실행할때마다 바뀜
 //반올림
 console.log((25.523).toFixed(2)); //25.52
 console.log((25.527).toFixed(2)); //25.53 소수점 2자리까지 살리기(반올림)
+
+//정적 프로퍼티 -> new를 사용하지 않음
