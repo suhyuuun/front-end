@@ -16,7 +16,7 @@ myChb.map((element) => {
 function carCount() {
   //현재 이벤트가 발생된 객체를 나타냄 / element(checkbox)
   //   console.log(this);
-  console.log(this.id);
+  // console.log(this.id);
 
   //defaultValue는 <input>에 초기에 입력된 value의 값을 기억해 가져온다.
   let basicCar = Number(totalCar.defaultValue);
