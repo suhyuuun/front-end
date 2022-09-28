@@ -1,0 +1,91 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+/* 공통 CSS*/
+
+/*가운데 정렬*/
+.ibx {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.pbx {
+  float: left;
+  height: 100%;
+  padding: 10px;
+  /*박스가 패딩때문에 커지는 것을 막아줌*/
+  box-sizing: border-box;
+}
+/*====================A header====================*/
+.top {
+  position: relative;
+  height: 100px;
+  z-index: 999; /*가장 위로 배치*/
+}
+
+.top1 {
+  width: 200px;
+}
+
+.top2 {
+  width: 1000px;
+}
+
+/*로고*/
+.logo {
+  margin-left: -10px;
+}
+
+/*메뉴*/
+.gnb {
+  width: 800px;
+  height: 50px;
+  background-color: rgb(117, 188, 255);
+  margin-top: 40px;
+  margin-left: 190px;
+}
+
+.gnb li {
+  position: relative;
+  width: 200px;
+}
+
+.gnb a {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*서브메뉴*/
+.gnb ol {
+  height: 0;
+  overflow: hidden; /*흘러넘친것만 보이지 않음*/
+}
