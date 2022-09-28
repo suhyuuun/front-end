@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html_025_time</title>
+  </head>
+  <body>
+    <!--
+    type='time'
+    1. time: 시간만 입력
+
+    type='datetime-local'
+    1. datatime : 년-월-일-시간 단위로 입력, 
+    -->
+
+    <form action="">
+      <h3>현재 시간 입력</h3>
+      <span>Time:</span><input type="time" name="Now" />
+
+      <h3>생일(년도, 월, 일, 시간)입력</h3>
+      <span>Birthday:</span><input type="datetime" name="bdaytime" />
+      <span>Birthday:</span><input type="datetime-local" name="bdaytime" />
+
+      <p>
+        <input type="submit" value="완료" /> <input type="reset" value="취소" />
+      </p>
+    </form>
+  </body>
+</html>

@@ -21,3 +21,17 @@ let memeber2 = {
 //Window
 memeber2.show();
 //////////////////////////////////////////////
+
+function showThisName() {
+  console.log(this);
+}
+
+//Window
+showThisName();
+
+let showThisName2 = () => {
+  console.log(this);
+};
+
+//Window
+showThisName2();
