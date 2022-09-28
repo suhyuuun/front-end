@@ -11,7 +11,7 @@ document.frm.onsubmit = () => {
 
 //전체선택
 document.frm.allCheck.onclick = function () {
-  //  console.log(this.checked); //현재 이벤트가 발생된 개체를 부를 때 this라고 함
+  //  console.log(this.checked); //현재 이벤트가 발생된 객체를 부를 때 this라고 함
 
   // document.frm.subject1.checked = this.checked;
   //  document.frm.subject2.checked = this.checked;
@@ -43,7 +43,7 @@ document.frm.allCheck.onclick = function () {
   // let myArray = Array.from(checkgroup);
   // console.log(myArray);
 
-  // myArray.ap(function (element) {
+  // myArray.map(function (element) {
   //   console.log(this);
   //   element.checked = myThis.checked;
   // });

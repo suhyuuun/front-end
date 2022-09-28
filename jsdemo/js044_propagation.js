@@ -23,11 +23,11 @@ document.querySelector("a").onclick = (e) => {
 
 /*
 [1] Event Propagation(이벤트 전파)
-    1) 캡처링(captruing phase) : 부모요소에서 Target요소로 이벤트 전파
+    1) 캡처링(capturing phase) : 부모요소에서 Target요소로 이벤트 전파
     2) 버블링(bubbling phase) : Target요소에서 부모요소로 이벤트 전파
  
 [2] 이벤트 차단
-    stopPropagtion()
+    stopPropagation()
 
 [3] stopPropagation()와 preventDefault()비교
     stopPropagation() : 이벤트 전파 차단 return false(jQuery)

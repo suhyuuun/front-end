@@ -14,6 +14,9 @@ for (let i = 0; i < 6; i++) {
   list.splice(index, 1);
   res.push(num);
 }
-console.log(res);
 
-let div = document.querySelector("div");
+let divList = document.querySelectorAll("div.wrap div");
+
+divList.forEach((element, idx) => {
+  element.innerText = res[idx];
+});
