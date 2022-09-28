@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js051_main_popup.html</title>
+    <style>
+      #popup {
+        width: 301px;
+        height: 351px;
+        border: 1px solid black;
+        position: fixed;
+        left: 30%;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        코로나19 주간 위험도가 12주 만에 ‘낮음’으로 하향 조정됐습니다.
+        중앙방역대책본부는 오늘(28일) 정례 브리핑에서 지난주(9.18~24) 기준
+        코로나19 주간 위험도를 전국과 수도권, 비수도권 모두 ‘중간’에서
+        ‘낮음’으로 하향 조정했습니다. 방대본은 “중환자실과 준-중환자실 확보
+        병상이 줄었지만, 가동률이 감소하며 의료대응역량이 안정세를 보이고 있고,
+        확진자 발생도 계속 감소하는 상황을 고려했다”고 설명했습니다. 코로나19
+        주간 위험도가 ‘낮음’으로 내려온 것은 지난 6월 마지막 주 이후 12주
+        만입니다. 지난주 감염재생산지수(Rt) 역시 0.8로, 5주 연속 1 이하를
+        유지했습니다. 전국 중환자 병상 가동률은 5주 연속 감소해 전국 23.4%,
+        수도권 23.9%, 비수도권 22.3%로 집계됐습니다. 준-중환자 병상가동률도 전국
+        기준 28%로 9월 둘째 주(38%)보다 10%p 감소했습니다. 다만, 9월 둘째
+        주(9.11.~9.17.) 주간 확진자 중 재감염 추정사례 비율은 10.29%로
+        전주(10.17%)보다 증가했습니다. 모델링 전문가들이 최근 상황을 반영해
+        예측한 결과, 현재 유행은 정점 구간을 지나 5주간 감소세를 보이고 있으며,
+        확진자 발생은 당분간 계속 줄어들 것으로 나타났습니다. 새로운 변이 확산과
+        같은 큰 변수가 없으면 당분간 현재 수준 이상으로 확진자 증가 가능성은
+        작지만, 소규모 증가와 같은 상황은 발생할 수 있다고 덧붙였습니다.
+      </p>
+      <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+      </div>
+      <map name="pop" id="pop">
+        <!--coords='x start, y start, x end, y end'-->
+        <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기"
+      /></map>
+    </div>
+    <script>
+      let close = document.querySelector("map#pop area");
+      close.onclick = () => {
+        let popup = document.querySelector("div#popup");
+        popup.style.width = "0px";
+        popup.style.height = "0px";
+        popup.style.visibility = "hidden";
+      };
+    </script>
+  </body>
+</html>
