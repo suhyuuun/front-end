@@ -35,6 +35,7 @@ function chgTab(i1, i2) {
   //on클래스 빼기
   tm[i2].classList.remove("on");
   tc[i2].classList.remove("on");
+  fdsfdsfdjsfkdl;
 }
 
 ////////////////////////////////////////////////
