@@ -68,6 +68,20 @@ li {
   margin-left: 190px;
 }
 
+/*.gnb가상요소로 메뉴 100%(1200px)배경 만들기*/
+.gnb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  /* 나의 부모는? .gnb가 부모여선 안됨*/
+  width: 100%;
+  height: 0; /*170px - .gnb에 마우스 오버시 크기*/
+  background-color: rgba(218, 238, 255, 0.9);
+  transition: height 0.4s; /*서브메뉴 ol과 동일한 트렌지션*/
+}
+
 .gnb li {
   position: relative;
   width: 200px;
@@ -87,5 +101,151 @@ li {
 /*서브메뉴*/
 .gnb ol {
   height: 0;
-  overflow: hidden; /*흘러넘친것만 보이지 않음*/
+  overflow: hidden;
+}
+
+.gnb:hover ol,
+.gnb:hover::before {
+  height: 170px;
+}
+
+.gnb ol a {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/*하이라이트 설정*/
+/*메인, 서브 메뉴*/
+.gnb li:hover a {
+  color: #fff;
+}
+
+/*서브 메뉴*/
+.gnb ol li:hover a {
+  background-color: rgb(0, 54, 233);
+}
+
+/*===============슬라이딩======================*/
+.ban {
+  height: 300px;
+  overflow: hidden;
+}
+.slide {
+  position: relative;
+  top: 0;
+}
+
+/*=============공지사항 및 갤러리=============*/
+
+.cont > .pbx {
+  width: 400px;
+  /* background-color: yellow; */
+}
+
+/* 탭메뉴 */
+.tm {
+  width: 200px;
+  height: 40px;
+  /* background-color: yellow; */
+}
+
+.tm li a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgb(94, 169, 255);
+}
+
+.tm li.on a {
+  background-color: #fff;
+}
+
+/* 탭 내용 */
+.tc {
+  height: 138px;
+  background-color: #fff;
+}
+
+.tc > li {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.tc > li.on {
+  display: block;
+}
+
+/*공지사항 리스트 */
+.gong {
+  padding-top: 9px;
+  padding-left: 7px;
+}
+
+.gong li {
+  line-height: 24px;
+  /* border: 1px solid black; */
+}
+
+.gong a {
+  display: inline-block;
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gong span {
+  float: right;
+  padding-right: 5px;
+}
+
+/*갤러리 리스트*/
+.gal li {
+  margin: 18px 12px;
+}
+
+.gal img {
+  width: 100px;
+  border: 1px solid #777;
+}
+
+/* 배너 및 바로가기 이미지 */
+.im {
+  width: 100%;
+  height: 100%;
+}
+
+/*================Footer==============*/
+.info1 {
+  width: 200px;
+}
+.info2 {
+  width: 800px;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+}
+.info3 {
+  width: 200px;
+  text-align: center;
+  line-height: 107px;
+}
+
+/*=============팝업창================*/
+.pop {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+
+  width: 350px;
+  padding: 15px;
+  z-index: 999;
+  background-color: rgb(186, 217, 64);
+  border: 3px solid #888;
+}
+
+.bbx {
+  text-align: right;
 }
