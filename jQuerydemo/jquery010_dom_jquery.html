@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let btnNode = document.getElementById("btn");
+        let btnElement = $("#btn");
+        //[object HTMLButtonElement] - 자바스크립트로 가지고 온것, [object Object] - 제이쿼리로 가지고 온것
+        document.write(btnNode + ",     " + btnElement + "<br/>");
+
+        //[object Object] - 제이쿼리형태, [object HTMLButtonElement] - 자바스크립트 형태
+        document.write($(btnNode) + ",    " + btnElement[0]);
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          //[object HTMLButtonDocument]-자바스크립트, [object Object]-제이쿼리
+          document.write(this + "," + $(this) + "<br />");
+          //BODY
+          document.write(this.parentNode.nodeName + "<br />");
+          //BODY         제이쿼리에[0]을 붙이면서 자바스크립트로 변경후 .nodeName사용
+          document.write($(this).parent()[0].nodeName + "<br/>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>
