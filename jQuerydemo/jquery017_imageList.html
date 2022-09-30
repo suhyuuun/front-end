@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>jquery017_imageList.html</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      div {
+        width: 300px;
+        margin: 10px auto;
+      }
+
+      ul {
+        list-style-type: none;
+        width: 300px;
+      }
+
+      li {
+        width: 90px;
+        height: 100px;
+        float: left;
+      }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -18,7 +41,37 @@
           "pic_t7.jpg",
           "pic_t8.jpg",
         ];
+
+        imgList.map((element, index) => {
+          $("ul").append(
+            `<li><img src='images/${element}'/><p><input type='checkbox' /><span>이미지${
+              index + 1
+            }</span></p></li>`
+          );
+          //전체선택
+          //   $(".check_all").click(() => {
+          //     $(".chk").prop("checked", $(".check_all").prop("checked"));
+          //   });
+
+          //   //삭제
+          //   $("button").click(() => {
+          //     $(".chk:checked").parents("li").remove();
+          //   });
+        });
+        //전체선택
+        $(".check_all").click(function () {
+          //true
+          console.log(this.checked);
+          //$("p input").prop("checked", this.checked); //자바스크립트 이용
+          $("p input").prop("checked", $(this).prop("checked")); //제이쿼리 이용
+        });
+
+        //삭제
+        $("button").click(() => {
+          $("p input:checked").parents("li").remove();
+        });
       });
+      //연습해보기!!!!!
     </script>
   </head>
   <body>
