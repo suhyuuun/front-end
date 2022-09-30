@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery018_options.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let arr = [
+          ["불고기", "삼계탕", "비빔밥"],
+          ["짜장면", "짬뽕", "탕수육"],
+          ["회덮밥", "덴뿌라", "우동"],
+        ];
+        //click 사용하면 중북으로 출력되므로 change사용
+        $("#menu").change(function () {
+          //console.log(this.selectedIndex, this.value, this.name);
+          //console.log(this.options[this.selectedIndex].childNodes[0]);
+          //console.log($("option:selected", this).index());
+          //console.log($("option:selected", this).text());
+          //console.log($("option:selected", this).val());
+
+          let row = $("option:selected", this).index();
+          if (row != 0) {
+            //서브메뉴 삭제
+            $("#sub option.food").remove();
+            //서브메뉴 추가
+            arr[row - 1].map(function (element) {
+              $("#sub").append(`<option class='food'>${element}</option>`);
+            });
+          } else {
+            alert("메뉴를 선택하세요");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select id="menu" name="menu">
+      <option value="" selected="selected">메뉴선택</option>
+      <option value="m1">한식</option>
+      <option value="m2">중식</option>
+      <option value="m3">일식</option>
+    </select>
+
+    <select id="sub">
+      <option value="">음식선택</option>
+    </select>
+  </body>
+</html>
