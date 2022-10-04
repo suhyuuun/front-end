@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    color:black;
+}
+a {
+    color: black;
+    text-decoration: none;
+  }
+  ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+    float: left;
+  }
+  .box {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .box2 {
+    float: left;
+    height: 100%;
+    padding: 10px;
+    /*박스가 패딩때문에 커지는 것을 막아줌*/
+    box-sizing: border-box;
+  }
+/*===========header=============*/
+.top{
+    background-color: black;
+    color: white;
+    position: relative;
+  height: 100px;
+  z-index: 999;
+}
+
+.header{
+    width: 200px;
+
+}
+.menu{
+    width: 1000px;
+}
