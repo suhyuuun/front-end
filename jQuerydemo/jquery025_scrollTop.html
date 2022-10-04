@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery025_scrollTop.html</title>
+    <style>
+      body {
+        height: 4000px;
+        width: 3000px;
+      }
+
+      div {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        position: absolute;
+        top: 100px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let defaultTop = parseInt($("div").css("top"));
+        //top:100
+        console.log(`top:${defaultTop}`);
+
+        $(document).on("scroll", function () {
+          let currentTop = $(document).scrollTop();
+          console.log(`현재문서: ${currentTop}`);
+
+          $("div")
+            .stop() //stop을 넣어주면 animate 효과가 더 빨리 나타남
+            .animate({ top: defaultTop + currentTop }, 50);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

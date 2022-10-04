@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery026_rolling_slide_banner.html</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      li {
+        list-style-type: none;
+        float: left;
+        width: 80px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      /*가로 :260(width) + 40(padding) + 2(border)*/
+      #banner_wrap {
+        width: 260;
+        padding: 10px 20px; /*좌우 상하*/
+        margin: 0 auto;
+        border: 1px solid #aaa;
+      }
+
+      #banner {
+        width: 650px; /*8개 8*80=640, 640 + 10*/
+        /* height: 40px; height값은 의미없음, background-color보려고 설정한 값 */
+        /* background-color: yellow; */
+      }
+
+      #frame {
+        width: 232px; /* 3*80=240인데 영역을 잡기 위한 것으로 사진크기는 72니까 8를 제외한 232px */
+        height: 54px;
+        /* background-color: red; */
+        position: relative;
+        margin: 10px auto;
+        overflow: hidden;
+      }
+
+      p {
+        clear: both;
+        text-align: center;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //ul
+        let list = $("#banner");
+
+        //프레임에 사진 노출될 개수
+        let show_num = 3;
+
+        //이전, 다음 버튼 클릭할때 증감되는 값
+        let num = 0;
+
+        //총<li>의 갯수 5개 리턴
+        let total = $(">li", list).length;
+        //total:5
+        console.log(`total:${total}`);
+
+        //li의 너비 : 80
+        let li_width = $("li:first", list).width();
+
+        // let copyObj = $(">li:lt(3)", list).clone();
+        // let copyObj = $(">li:lt(" + show_num + ")", list).clone();
+        let copyObj = $(`>li:lt(${show_num})`, list).clone();
+        $(list).append(copyObj);
+
+        //다음 버튼을 클릭할 때마다 이벤트 발생
+        $(".next").click(function () {
+          if (num == total) num = 0;
+          num++;
+          $(list)
+            .stop()
+            .animate({ "margin-left": -li_width * num + "px" }, 50);
+          return false;
+        });
+
+        $(".prev").click(function () {
+          if (num == 0) num = total;
+          num--;
+          $(list)
+            .stop()
+            .animate({ "margin-left": -li_width * num + "px" }, 50);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+      <div id="frame">
+        <ul id="banner">
+          <li>
+            <a href="#"><img src="images/pic_t1.jpg" alt="사진1" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_t2.jpg" alt="사진2" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_t3.jpg" alt="사진3" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_t4.jpg" alt="사진4" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_t5.jpg" alt="사진5" /></a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        <a href="#" class="prev"
+          ><img src="images/prev_btn.png" alt="이전버튼"
+        /></a>
+        <a href="#" class="next"
+          ><img src="images/next_btn.png" alt="다음버튼"
+        /></a>
+      </p>
+    </div>
+  </body>
+</html>

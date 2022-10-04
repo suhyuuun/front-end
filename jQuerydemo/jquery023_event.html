@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery023_event.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("h1 a").on("mouseover focus", function () {
+        //   $(this).css({ "background-color": "red" });
+        // });
+
+        // $("h1 a").on("mouseout blur", function () {
+        //   $(this).css({ "background-color": "white" });
+        // });
+
+        //$("요소").on({ 이름: 값, 이름: 값 });
+        $("h1 a").on({
+          "mouseover focus": function () {
+            $(this).css({ "background-color": "red" });
+          },
+          "mouseout blur": function () {
+            $(this).css({ "background-color": "white" });
+          },
+        });
+
+        //////////////////////////////////////////////////
+        //동적생성요소에 이벤트 등록 (정적인 요소를 기준으로 잡아야함)
+        $(document).on("mouseover focus", "h2 a", function () {
+          $(this).css({ color: "orange" });
+        });
+
+        //document자리에 "h2"라고 작성해도 가능!
+        // $("h2").on("mouseover focus", "a", function () {
+        //   $(this).css({ color: "orange" });
+        // });
+
+        $("h2").on("mouseout blur", "a", function () {
+          $(this).css({ color: "black" });
+        });
+
+        $("h2").append('<a href="#">new element</a>');
+
+        $("button#clear").click(function () {
+          $("h1 a").off("mouseover focus mouseout blur");
+          $("h2").off("mouseover focus", "a");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1><a href="#">버튼</a></h1>
+
+    <h2></h2>
+
+    <h3><a href="#">하위요소1</a><a href="#">하위요소2</a></h3>
+
+    <button id="btn">one</button>
+    <span>0</span>
+    <button id="clear">이벤트 제거</button>
+  </body>
+</html>

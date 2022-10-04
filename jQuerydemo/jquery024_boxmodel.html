@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery024_boxmodel</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      #wrap {
+        width: 300px;
+        height: 200px;
+        background-color: #ccc;
+        position: relative;
+        top: 50px;
+        left: 400px;
+        margin: 0;
+      }
+
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        position: relative; /*본인의 위치 기준*/
+        top: -50px;
+        left: 100px;
+        padding: 5px;
+        border: 10px solid red;
+        margin: 10px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //position() : 선택한 요소의 포지션 위치값 리턴(기준이 자신)
+        let top1 = $("#box").position().top;
+        let left1 = $("#box").position().left;
+        //top:-60(top + margin), left:100
+        $("#t1").text(`top:${top1}, left:${left1}`);
+
+        //offset():선택한 요소의 포지션 위치값 리턴(기준이 body)
+        let top2 = $("#box").offset().top;
+        let left2 = $("#box").offset().left;
+        //top:10, left:510
+        $("#t2").text(`top:${top2}, left:${left2}`);
+
+        //width(): margin, border, padding을 제외한 가로 크기 리턴
+        let w1 = $("#box").width();
+        //너비:50
+        $("#t3").text(`너비:${w1}`);
+
+        //innerWidth(): padding을 포함한 가로크기 리턴
+        let w2 = $("#box").innerWidth();
+        //너비:60
+        $("#t4").text(`너비:${w2}`);
+
+        //outerWidth() : border와 padding을 포함한 가로크기 리턴
+        let w3 = $("#box").outerWidth();
+        //너비:80
+        $("#t5").text(`너비:${w3}`);
+
+        //outerWidth(true) : margin, border, padding을 포함한 가로크기 리턴
+        let w4 = $("#box").outerWidth(true);
+        //너비:100
+        $("#t6").text(`너비:${w4}`);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <p id="box">박스1</p>
+    </div>
+
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+    <p id="t4"></p>
+    <p id="t5"></p>
+    <p id="t6"></p>
+  </body>
+</html>
