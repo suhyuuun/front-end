@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "bootstrapdemo",
+		"path": ".."
+	},
+	{
+		"name": "bootstrap-5.2.2-dist",
+		"path": "C:/Users/EZEN/Desktop/bootstrap-5.2.2-dist/bootstrap-5.2.2-dist"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "bootstrapdemo"
+  }
+}
